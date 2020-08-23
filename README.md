@@ -34,11 +34,6 @@ tail -n 20 %TEMP%\UserCredentialsValidator.log
 ```
 ## Deployment
 Additional notes about deploying API.
-### Building Client Console application code
-```
-dotnet restore
-dotnet build UserCredentialsValidator.ClientApp --configuration Release
-```
 ### Publishing Azure API
 * Start Publishing process of UserCredentialsValidator.AzureAPI project using Visual Studio (update Azure API address to any other you like).
 * Go to https://portal.azure.com/ and Azure Storage Account connection string.
@@ -46,3 +41,9 @@ dotnet build UserCredentialsValidator.ClientApp --configuration Release
 * Complete Publishing.
 * Go to https://portal.azure.com/ and get your own ValidateUserCredentials function key.
 * Update AzureAPIBaseURL and ValidateUserCredentialsFunctionKey strings in UserCredentialsValidator.SharedResources project resources.
+* Rebuild Client Console application.
+### Building Client Console application code
+```
+dotnet restore
+dotnet build UserCredentialsValidator.ClientApp --configuration Release
+```
