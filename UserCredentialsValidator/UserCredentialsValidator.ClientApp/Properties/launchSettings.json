@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "UserCredentialsValidator.ClientApp": {
+      "commandName": "Project"
+    }
+  }
+}
