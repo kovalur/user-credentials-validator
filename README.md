@@ -20,8 +20,8 @@ dotnet test --nologo -v n
 #### non-interactive
 ```
 cd .\UserCredentialsValidator.ClientApp\bin\Debug\netcoreapp3.1
-.\ClientApp.exe -e "example@gmail.com" -p "password"
 .\ClientApp.exe --help
+.\ClientApp.exe -e "example@gmail.com" -p "password"
 ```
 #### interactive
 ```
@@ -36,7 +36,7 @@ tail -n 20 %TEMP%\UserCredentialsValidator.log
 Additional notes about deploying API.
 ### Publishing Azure API
 * Start Publishing process of UserCredentialsValidator.AzureAPI project using Visual Studio (update Azure API address to any other you like).
-* Go to https://portal.azure.com/ and Azure Storage Account connection string.
+* Go to https://portal.azure.com/ and get Azure Storage Account connection string.
 * Update AzureWebJobsStorage and AzureWebJobsDashboard strings in local.settings.dev.json file of UserCredentialsValidator.AzureAPI project (replace "UseDevelopmentStorage=true"), rename local.settings.dev.json to local.settings.json.
 * Complete Publishing.
 * Go to https://portal.azure.com/ and get your own ValidateUserCredentials function key.
